@@ -1,0 +1,15 @@
+$logo-width: 64px;
+$logo-height: 46px;
+
+.top-bar {
+  padding: var(--spacing-5-5) var(--spacing-4-5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo-img {
+    display: block;
+    width: $logo-width;
+    height: $logo-height;
+  }
+}

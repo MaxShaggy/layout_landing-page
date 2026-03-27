@@ -1,0 +1,29 @@
+$icon-size: 24px;
+
+.icon {
+  display: flex;
+  column-gap: var(--spacing-4-6);
+
+  &__phone,
+  &__menu,
+  &__close {
+    height: $icon-size;
+    width: $icon-size;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__phone {
+    background-image: url(../images/icons/icon-phone.svg);
+  }
+
+  &__menu {
+    background-image: url(../images/icons/icon-burger.svg);
+  }
+
+  &__close {
+    background-image: url(../images/icons/icon-close.svg);
+  }
+}
