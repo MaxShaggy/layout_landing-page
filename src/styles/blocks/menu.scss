@@ -47,7 +47,7 @@
   &-numbers__body {
     display: flex;
     flex-direction: column;
-    row-gap: var( --spacing-4-2);
+    row-gap: var(--spacing-4-2);
   }
 
   &__link {
@@ -62,7 +62,7 @@
     color: var(--color-white);
     position: relative;
     align-self: flex-start;
-    padding-bottom: var( --spacing-4-2);
+    padding-bottom: var(--spacing-4-2);
   }
 
   &__call::after {

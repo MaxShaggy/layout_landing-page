@@ -1,11 +1,29 @@
 $icon-size: 24px;
+$icon-size-on-tablet: 32px;
 
 .icon {
   display: flex;
   column-gap: var(--spacing-4-6);
 
+  @include on-tablet {
+    column-gap: var(--spacing-5-11);
+  }
+
   &__phone,
-  &__menu,
+  &__menu {
+    height: $icon-size;
+    width: $icon-size;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include on-tablet {
+      height: $icon-size-on-tablet;
+      width: $icon-size-on-tablet;
+    }
+  }
+
   &__close {
     height: $icon-size;
     width: $icon-size;
@@ -13,6 +31,7 @@ $icon-size: 24px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    background-image: url(../images/icons/icon-close.svg);
   }
 
   &__phone {
@@ -21,9 +40,5 @@ $icon-size: 24px;
 
   &__menu {
     background-image: url(../images/icons/icon-burger.svg);
-  }
-
-  &__close {
-    background-image: url(../images/icons/icon-close.svg);
   }
 }

@@ -1,13 +1,11 @@
 .header {
   box-sizing: border-box;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  row-gap: 104px;
   background-image: url(../images/header-bg-mobile.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
 
   &__top {
     display: flex;
@@ -24,10 +22,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
     color: var(--color-white);
     font-size: var(--fs-huge);
     font-weight: var(--fw-7);
     line-height: 1;
     letter-spacing: -1.5px;
+
+    @include on-tablet {
+      top: 30.5%;
+      font-size: var(--fs-extra-huge);
+    }
   }
 }
