@@ -13,6 +13,10 @@ $logo-height-on-tablet: 65px;
     padding: var(--spacing-5-10) var(--spacing-4-18);
   }
 
+  @include on-desktop {
+    padding-inline: var(--spacing-5-24);
+  }
+
   &__logo-img {
     display: block;
     width: $logo-width;

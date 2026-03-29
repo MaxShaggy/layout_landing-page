@@ -1,0 +1,18 @@
+$button-height: 56px;
+$width-ontablet: 392px;
+
+.button {
+  font-weight: var(--fw-7);
+  line-height: 27px;
+  color: var(--color-white);
+  background-color: var(--color-red-500);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $button-height;
+  margin: 0 auto;
+
+  @include on-tablet {
+    max-width: $width-ontablet;
+  }
+}

@@ -37,5 +37,9 @@
       top: 30.5%;
       font-size: var(--fs-extra-huge);
     }
+
+    @include on-desktop {
+      font-size: var(--fs-extrimaly-huge);
+    }
   }
 }
