@@ -1,3 +1,7 @@
+.page:has(.page__menu:target) {
+  overflow: hidden;
+}
+
 .main {
   padding-block: var(--spacing-5-20);
 
@@ -17,6 +21,7 @@
       display: flex;
       flex-direction: column;
       column-gap: var(--spacing-4-8);
+      justify-content: space-between;
     }
 
     @include on-tablet {
@@ -204,15 +209,11 @@
     }
   }
 
-  &__img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
+  &__wrapper-img {
+    overflow: hidden;
 
-    &--position-left {
-      object-position: 15%;
+    &--span-left {
+      overflow: hidden;
 
       @include on-tablet {
         aspect-ratio: 392 / 186;
@@ -221,14 +222,45 @@
       }
     }
 
-    &--position-right {
-      object-position: right;
+    &--span-right {
+      overflow: hidden;
 
       @include on-tablet {
         aspect-ratio: 392 / 186;
         grid-column: span 2;
         object-position: center;
       }
+    }
+
+    &--mb-onmobile {
+      margin-bottom: var(--spacing-4-6);
+    }
+
+    &--mb-ontablet {
+      @include on-tablet {
+        margin-bottom: var(--spacing-4-8);
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &--position-left {
+      object-position: 15%;
+    }
+
+    &--position-right {
+      object-position: right;
     }
 
     &--display-none {
@@ -264,11 +296,14 @@
     width: 100%;
     aspect-ratio: 280 / 277;
     object-fit: cover;
-    margin-bottom: var(--spacing-4-6);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
 
     @include on-tablet {
       aspect-ratio: 392 / 387;
-      margin-bottom: var(--spacing-4-8);
     }
 
     @include on-desktop {
@@ -280,6 +315,24 @@
     font-family: Roboto, Arial, Helvetica, sans-serif;
     line-height: 27px;
     text-align: center;
+  }
+
+  &__flex-container {
+    @include on-tablet {
+      display: flex;
+      column-gap: var(--spacing-5-15);
+      justify-content: space-between;
+    }
+  }
+
+  &__form-block {
+    @include on-tablet {
+      flex-basis: 288px;
+    }
+    
+    @include on-desktop {
+      flex-basis: 411px;
+    }
   }
 
   &__form {
