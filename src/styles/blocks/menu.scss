@@ -53,15 +53,50 @@
   text-transform: uppercase;
   line-height: 1.68;
 
+  &--mb {
+    margin-bottom: var(--spacing-4-12);
+  }
+
   &__body {
     display: flex;
     flex-direction: column;
     row-gap: var(--spacing-4-2);
+
+    &--gap-big {
+      row-gap: var(--spacing-4-12);
+    }
+  }
+
+  &__item {
+    &--black {
+      color: var(--color-black);
+    }
+  }
+
+  &__location {
+    display: block;
+    &--mb-big {
+      margin-bottom: var(--spacing-4-4);
+    }
   }
 
   &__link {
     font-weight: var(--fw-7);
     color: var(--color-white);
+
+    &--black-mb {
+      display: block;
+      color: var(--color-black);
+      margin-bottom: var(--spacing-4-2);
+    }
+  }
+
+  &__text {
+    display: block;
+    font-weight: var(--fw-4);
+    font-size: var(--fs-small);
+    line-height: 27px;
+    margin-bottom: var(--spacing-4-1);
   }
 
   &__call {

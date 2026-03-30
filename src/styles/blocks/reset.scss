@@ -10,7 +10,11 @@ li,
 h1,
 h2,
 h3,
-p {
+p,
+form,
+input,
+textarea,
+button {
   margin: 0;
   padding: 0;
 }
@@ -26,4 +30,25 @@ a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+}
+
+form {
+  border: none;
+}
+
+input,
+textarea {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
 }
