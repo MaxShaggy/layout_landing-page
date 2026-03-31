@@ -9,6 +9,10 @@ $logo-height-on-tablet: 65px;
   justify-content: space-between;
   align-items: center;
 
+  &__icon {
+    position: relative;
+  }
+
   @include on-tablet {
     padding: var(--spacing-5-10) var(--spacing-4-18);
   }

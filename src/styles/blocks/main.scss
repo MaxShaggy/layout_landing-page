@@ -4,6 +4,7 @@
 
 .main {
   padding-block: var(--spacing-5-20);
+  background-color: var(--color-white);
 
   @include on-tablet {
     padding: var(--spacing-5-28) 0 var(--spacing-4-39);
@@ -329,7 +330,7 @@
     @include on-tablet {
       flex-basis: 288px;
     }
-    
+
     @include on-desktop {
       flex-basis: 411px;
     }

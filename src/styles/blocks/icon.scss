@@ -24,6 +24,16 @@ $icon-size-on-tablet: 32px;
     }
   }
 
+  @media (hover: hover) and (pointer: fine) {
+    &:has(.icon__phone:hover),
+    &:has(.phone-numbers--pos-absolute:hover) {
+      .phone-numbers--pos-absolute {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
   &__close {
     height: $icon-size;
     width: $icon-size;

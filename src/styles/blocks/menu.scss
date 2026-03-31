@@ -47,7 +47,7 @@
     position: relative;
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: -4px;
       left: 0;
@@ -74,6 +74,15 @@
   color: var(--color-white);
   text-transform: uppercase;
   line-height: 1.68;
+
+  &--pos-absolute {
+    position: absolute;
+    top: -37px;
+    left: -195px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
 
   &--mb {
     margin-bottom: var(--spacing-4-12);
@@ -139,7 +148,7 @@
     }
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: -4px;
       left: 0;
@@ -185,7 +194,7 @@
     padding-bottom: var(--spacing-4-2);
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: 0;
       left: 0;
