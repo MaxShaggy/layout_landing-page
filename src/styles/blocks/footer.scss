@@ -1,5 +1,5 @@
 $footer-height: 180px;
-$footer-height-ontablet: 359px;
+$footer-height-on-tablet: 359px;
 
 .footer {
   position: sticky;
@@ -9,7 +9,7 @@ $footer-height-ontablet: 359px;
   overflow: hidden;
 
   @include on-tablet {
-    height: $footer-height-ontablet;
+    height: $footer-height-on-tablet;
   }
 
   &__image {
